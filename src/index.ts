@@ -28,7 +28,7 @@ import LeaderboardCommand from "./discord/commands/LeaderboardCommand";
 import CreateUserJoined from "./discord/events/CreateUserJoined";
 import Welcome, { WelcomeData } from "./discord/events/Welcome";
 import EchoCommand from "./discord/commands/EchoCommand";
-import MaiktimeSupport from "./discord/events/Maiktimesupport";
+import MaiktimeSupport from "./discord/events/MaiktimeSupport";
 
 dotenv.config();
 

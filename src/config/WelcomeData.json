@@ -18,7 +18,7 @@
             {
                 "title": "Willkommen auf dem Server $username;",
                 "message": [
-                    "Wir freuen uns dass du beigetreten bist!",
+                    "Wir freuen uns dass du beigetreten bist!\nDu bist das $memberCount;. Mitglied!",
                     "Wir haben dich schon erwartet!",
                     "GrEAT tO sEe yoU mY frIEnD!",
                     "Danke fürs beitreten!"

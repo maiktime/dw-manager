@@ -25,7 +25,6 @@ export default class EventHandler {
 
     removeEventListener<K extends keyof ClientEvents>(event: K, id: number): boolean {
         if (this.events[event]) {
-            // Remove
             const index = this.events[event].findIndex((obj) => obj.id === id);
             if (index !== -1) {
                 this.events[event].slice(index, 1);
@@ -38,7 +37,6 @@ export default class EventHandler {
     private call<K extends keyof ClientEvents>(key: K, ...args: ClientEvents[K]) {
         this.events[key].forEach((obj) => {
             try {
-                console.log("This is really working");
                 obj.listener(...args);
             } catch (Error) {
                 console.error(Error);

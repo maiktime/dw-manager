@@ -4,11 +4,12 @@
             {
                 "title": "Willkommen zurück $username;",
                 "message": [
-                    "Gut dass du wieder da bist!",
+                    "Gut dass du wieder da bist!\nDu bist der **$memberCount;**.",
                     "Schön dich wiederzusehen!",
                     "Schön dass du wieder da bist!",
                     "Wir freuen uns dass du uns wieder besuchst!"
                 ]
+          
             }
         ]
     },
@@ -28,7 +29,7 @@
     "Details": {
         "Information": {
             "title": "Information",
-            "description": "Wir empfehlen dir diese Informationen durchzulesen"
+            "description": "Wir empfehlen dir diese Informationen durchzulesen: <#566626677875015692>"
         }
     }
 }

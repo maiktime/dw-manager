@@ -25,6 +25,7 @@ export default class EventHandler {
 
     removeEventListener<K extends keyof ClientEvents>(event: K, id: number): boolean {
         if (this.events[event]) {
+            // Remove
             const index = this.events[event].findIndex((obj) => obj.id === id);
             if (index !== -1) {
                 this.events[event].slice(index, 1);

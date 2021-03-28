@@ -61,7 +61,7 @@ export default class InviteTracker extends EventModule {
                         embed
                             .setTitle("Bestätigung erforderlich")
                             .setDescription(
-                                `${inviteUsed.inviter.username} hat ein Mitglied zu diesem Server eingeladen (Coins: ${
+                                `<@${inviteUsed.inviter.id}> (${inviteUsed.inviter.username}) hat <@${member.id}> (${member.nickname}) zu diesem Server eingeladen (Coins: ${
                                     account.coins
                                 })\nGeld überweisen? ${account.coinSystem.earnConfig.get(
                                     AccountEarnType.INVITED_PERSON

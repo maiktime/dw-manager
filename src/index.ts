@@ -28,7 +28,7 @@ import LeaderboardCommand from "./discord/commands/LeaderboardCommand";
 import CreateUserJoined from "./discord/events/CreateUserJoined";
 import Welcome, { WelcomeData } from "./discord/events/Welcome";
 import EchoCommand from "./discord/commands/EchoCommand";
-import MaiktimeSupport from "./discord/events/MaiktimeSupport";
+
 
 dotenv.config();
 
@@ -109,7 +109,6 @@ const bot = new Bot({
     bot.service.register(new InviteTracker(bot, coinSystem));
     bot.service.register(new WordManager(bot, coinSystem, channelInformationLinker));
     bot.service.register(new BumpEvent(bot, coinSystem));
-    bot.service.register(new MaiktimeSupport(bot));
 
     bot.service.register(new Welcome(bot, coinSystem, channelInformationLinker, welcomeInformationLinker));
     bot.service.register(new CreateUserJoined(bot, coinSystem));

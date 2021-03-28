@@ -111,7 +111,7 @@ const bot = new Bot({
     bot.service.register(new BumpEvent(bot, coinSystem));
 
     bot.service.register(new Welcome(bot, coinSystem, channelInformationLinker, welcomeInformationLinker));
-    bot.service.register(new CreateUserJoined(bot, coinSystem));
+    /* bot.service.register(new CreateUserJoined(bot, coinSystem)); */
 
     scheduler.scheduleJob({ hour: 0, minute: 0 }, () => {
         if (!fs.existsSync(dpData.parse("backup"))) {

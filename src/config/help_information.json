@@ -60,5 +60,11 @@
         "nav": "null",
         "description": "#file: ./markdown/help/moneyCommand.md",
         "childreen": []
+    },
+    "info": {
+        "title": "Informationen über den Bot",
+        "nav": null,
+        "description": "Dieser Befehl zeigt dir Informationen über den Bot an",
+        "childreen": []
     }
 }

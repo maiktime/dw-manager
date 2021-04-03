@@ -28,6 +28,7 @@ import LeaderboardCommand from "./discord/commands/LeaderboardCommand";
 import CreateUserJoined from "./discord/events/CreateUserJoined";
 import Welcome, { WelcomeData } from "./discord/events/Welcome";
 import EchoCommand from "./discord/commands/EchoCommand";
+import InfoCommand from "./discord/commands/InfoCommand";
 
 
 dotenv.config();
@@ -96,6 +97,7 @@ const bot = new Bot({
     bot.commandHandler.registerCommand(new CheckCommand(bot, "check", coinSystem)); // Administrative Check Command
     bot.commandHandler.registerCommand(new LeaderboardCommand(bot, "leaderboard", coinSystem)); // Leaderboard Command
     bot.commandHandler.registerCommand(new EchoCommand(bot, "echo", false));
+    bot.commandHandler.registerCommand(new InfoCommand(bot, "info"));
 
     const welcomeInformationLinker = new JsonLinker<WelcomeData>(dpConfig, "WelcomeData.json");
     welcomeInformationLinker.load();
@@ -111,7 +113,7 @@ const bot = new Bot({
     bot.service.register(new BumpEvent(bot, coinSystem));
 
     bot.service.register(new Welcome(bot, coinSystem, channelInformationLinker, welcomeInformationLinker));
-    bot.service.register(new CreateUserJoined(bot, coinSystem));
+    /* bot.service.register(new CreateUserJoined(bot, coinSystem)); */
 
     scheduler.scheduleJob({ hour: 0, minute: 0 }, () => {
         if (!fs.existsSync(dpData.parse("backup"))) {
